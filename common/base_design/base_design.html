@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <link rel="icon" href="/common/src/favicon/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css">
+    <link rel="stylesheet" href="/common/base_design/base_design.css">
+    <link rel="stylesheet" href="style/current_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"> -->
+    <!-- These below pre load script are given to page_builder.js→ImportScript() *please avoid duplication on contents.html-->
+    <!-- <https://code.jquery.com/jquery-3.6.1.min.js""></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script> -->
+    <!-- <script src="https://kit.fontawesome.com/ce41083364.js" crossorigin="anonymous"></script> -->
+  </head>
+  <body class="drawer drawer--left">
+    <div class="loader_wrap">
+      <!-- <img src="/common/base_design/loader.gif"> -->
+      <div class="loader"></div>
+      <div class="loading_message">Page Loading...</div>
+    </div>
+    <header role="banner">
+      <button type="button" class="drawer-toggle drawer-hamburger">
+        <span class="sr-only">toggle navigation</span>
+        <span class="drawer-hamburger-icon"></span>
+      </button>
+      <nav class="drawer-nav" role="navigation">
+        <ul class="drawer-menu">
+          <li><a class="drawer-brand" href="/">Home</a></li>
+          <li class="drawer-dropdown">
+            <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+              3D-network analyzer
+              <span class="drawer-caret"></span>
+            </a>
+            <ul class="drawer-dropdown-menu">
+              <li><a class="drawer-dropdown-menu-item" href="/3d_network_analyzer/">Main</a></li>
+              <li><a class="drawer-dropdown-menu-item" href="/3d_network_analyzer/tutorial_page/">Tutorial</a></li>
+            </ul>
+          </li>
+          <li><a class="drawer-menu-item" href="/index.html #key_and_frequency">Key and frequency</a></li>
+          <!-- <li><a class="drawer-menu-item" href="/common">common page style</a></li> -->
+        </ul>
+      </nav>
+    </header>
+    <section role="main & footer">
+      <main role="main contents" id="main_contents">
+      </main>
+      <footer>
+        <p>© 2022 Repainter</p><br>
+        <a href="/policies">Policies</a>
+        <div role="height_blank_type_1"></div>
+        <a href="/inquiry">Inquiry</a>
+      </footer>
+    </section>
+    <label id="pagetop_button">
+    </label>
+  </body>
+</html>

@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+@import url("https://use.fontawesome.com/releases/v5.6.1/css/all.css");
+
+@media screen and (max-width:600px) {
+  :root{
+    --base_scale:
+    var(--Mobile_base_scale);
+    --base_width:
+    var(--Mobile_base_width);
+  }
+}
+@media screen and (min-width:600px) {
+  :root{
+    --base_scale:var(--PC_base_scale);
+    --base_width:var(--PC_base_width)
+  }
+}
+
+:root{
+  --Mobile_base_scale:1rem;
+  --PC_base_scale: 1rem;
+  --Mobile_base_width:90%;
+  --PC_base_width:70%;
+  --font_size_1:
+  var(--base_scale);
+  --font_size_2:
+  calc(var(--base_scale)*1.2);
+  --font_size_3:
+  calc(var(--base_scale)*1.6);
+  --font_size_4:
+  calc(var(--base_scale)*0.8);
+
+  --font_family_1:
+  'Open Sans','Zen Kaku Gothic Antique', sans-serif;
+  --font_family_2:
+  'Oleo Script', cursive;
+
+
+  --blank_size_1:
+  calc(var(--font_size_3)*2);
+  --blank_size_2:
+  calc(var(--font_size_3)*3);
+  --blank_size_3:
+  calc(var(--font_size_1)*2.5);
+
+  --shadow_1: 0
+  calc(var(--base_scale)*0.05) calc(var(--base_scale)*0.15) gray;
+  --shadow_2: 0
+  calc(var(--base_scale)*0.05) calc(var(--base_scale)*0.15) black;
+
+  --inset_shadow_1: inset
+  0
+  calc(var(--base_scale)*0.025) calc(var(--base_scale)*0.075);
+  --color_1: #333333;
+  --color_2: #2b323c;
+  --color_3: #FFFFFF;
+  --color_4: lightgoldenrodyellow;
+  --color_5:
+  rgba(0, 0, 0, 0.125);
+  --color_6: #0066CC;
+  --color_7: #0000FF;
+
+  --color_8: black;
+  --border_width_1:
+  calc(var(--base_scale)*0.05);
+}
+
+body{
+  font-family: var(--font_family_1);
+  font-size: var(--font_size_1);
+  background-color: var(--color_3);
+  color: var(--color_1);
+  font-weight: normal;
+}
+
+section {
+    display: grid;
+    min-height: 100vh;
+    align-content: space-between;
+}
+
+main{
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+h1{
+  text-align: center;
+  font-size: var(--font_size_3);
+  font-family: var(--font_family_2);
+  color: var(--color_1);
+  padding: var(--font_size_3) calc(var(--font_size_3)*2);
+  width: 100%;
+}
+
+h2{
+  font-family: var(--font_family_2);
+  width: 100%;
+  font-size: var(--font_size_2);
+}
+
+
+a{
+  text-decoration: underline;
+  word-break: break-word;
+  color:
+  var(--color_6);
+}
+a:hover {
+  color:var(--color_7);
+  text-decoration:none;
+}
+
+ul {
+  margin: calc(var(--base_scale)*0.6) 0;
+  padding: 0 calc(var(--base_scale)*1.1);
+}
+li {
+  margin: calc(var(--base_scale)*0.3) 0;
+  list-style: disc;
+}
+
+[role=button_type_1]{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: calc(var(--base_scale)*0.2);
+  padding: calc(var(--base_scale)*0.3) calc(var(--base_scale)*1);
+  background: var(--color_2);
+  box-shadow: var(--shadow_1);
+  color: var(--color_3);
+  text-decoration: none;
+}
+[role=button_type_1]:hover, [role=button_type_1]:active {
+  box-shadow: var(--shadow_2);
+  color: var(--color_3);
+}
+[role=input_type_1]{
+  font-size: var(--base_scale);
+  width: 100%;
+  border-radius: calc(var(--base_scale)*0.4);
+  border: solid calc(var(--base_scale)*0.1);
+  -webkit-appearance: none;
+  margin: calc(var(--base_scale)*0.2) 0;
+  border-color: var(--color_1);
+  background: var(--color_3);
+  padding: calc(var(--base_scale)*0.2) calc(var(--base_scale)*0.4);
+}
+
+[role=height_blank_type_1]{
+  height: var(--font_size_1);
+}
+
+.drawer-menu{
+  padding-top: var(--font_size_3) !important;
+}
+.drawer--left.drawer-open .drawer-hamburger {
+  left: 0 !important;
+  padding-top: calc(var(--font_size_3)/2);
+}
+.drawer-hamburger{
+  width: var(--font_size_2) !important;
+}
+
+.drawer-dropdown-menu-item, .drawer-menu-item{
+  font-size: var(--font_size_1) !important;
+}
+
+.drawer-brand {
+  font-family: var(--font_family_2) !important;
+  font-size: var(--font_size_3) !important;
+  color: var(--color_1) !important;
+}
+.drawer-brand:hover, .drawer-brand:focus{
+  color: var(--color_8) !important;
+  text-decoration: underline;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: calc(var(--font_size_3)*2);
+  padding-right: var(--blank_size_2);
+  padding-bottom: calc(var(--font_size_3)*3);
+  padding-left: var(--blank_size_2);
+}
+footer a {
+  font-size: var(--font_size_4);
+}
+th{
+  font-weight: normal;
+}
+
+.loader_wrap{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 999;
+  opacity: 80%;
+  flex-direction: column;
+}
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+.loader {
+  margin: 60px auto;
+  font-size: calc(var(--base_scale)*0.6);
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 1.1em solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.loading_message{
+  font-size: var(--font_size_1);
+}
+
+#pagetop_button {
+  position: fixed;
+  bottom: calc(var(--font_size_3)*1.5);
+  right: var(--base_scale);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  border-radius: calc(var(--base_scale)*0.5);
+  width: calc(var(--font_size_3)*1.5);
+  height: calc(var(--font_size_3)*1.5);
+  box-shadow: var(--shadow_1);
+  background: var(--color_3);
+  font-size: var(--font_size_3);
+  padding: calc(var(--base_scale)/2);
+  color: var(--color_1);
+  opacity: 0.5;
+  border-width: calc(var(--base_scale)*0.1);
+  font-size: calc(var(--basic_size)*1.5);
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+  font-weight: 600;
+}
+#pagetop_button:hover, #pagetop_button:focus{
+  opacity: 1;
+}
+
+#pagetop_button::before{
+  content: "\f062";
+}
